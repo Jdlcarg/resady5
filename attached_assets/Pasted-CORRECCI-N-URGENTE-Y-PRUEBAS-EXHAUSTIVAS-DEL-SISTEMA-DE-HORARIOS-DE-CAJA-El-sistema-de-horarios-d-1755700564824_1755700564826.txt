@@ -1,0 +1,95 @@
+CORRECCIÓN URGENTE Y PRUEBAS EXHAUSTIVAS DEL SISTEMA DE HORARIOS DE CAJA
+
+El sistema de horarios de caja avanzada NO está funcionando correctamente. Necesito que hagas un análisis profundo y corrección completa siguiendo las reglas configuradas.
+
+PROBLEMAS IDENTIFICADOS:
+
+La caja se cierra pero NO genera el reporte automático
+En /cash-schedule la información está mal configurada
+Los datos NO se están tomando correctamente de la base de datos
+Posible problema de zona horaria (sistema chino/europeo vs local)
+ANÁLISIS PROFUNDO REQUERIDO:
+
+1. DIAGNÓSTICO COMPLETO DE ZONA HORARIA:
+
+Verificar configuración de timezone del servidor
+Comparar hora del sistema vs hora de base de datos
+Identificar si hay conflicto entre zonas horarias
+Verificar formato de fechas/horas en todo el código
+Analizar si JavaScript usa UTC vs hora local
+2. ANÁLISIS DETALLADO DE /cash-schedule:
+
+Revisar exactamente de dónde toma los datos
+Verificar conexión con base de datos Neon
+Confirmar que lee configuraciones del admin correctamente
+Analizar queries SQL utilizados
+Verificar que muestre horarios configurados reales
+3. ANÁLISIS DEL PROCESO DE CIERRE AUTOMÁTICO:
+
+Revisar el código que ejecuta el cierre automático
+Verificar triggers o cron jobs configurados
+Analizar por qué NO se genera el reporte
+Revisar logs de errores durante el cierre
+Verificar permisos y accesos a archivos
+4. PRUEBAS EXHAUSTIVAS REQUERIDAS:
+
+PRUEBA 1 - Configuración Inmediata:
+
+Configurar apertura: hora actual + 1 minuto
+Configurar cierre: hora actual + 2 minutos
+Verificar que se guarde en base de datos correctamente
+Confirmar que /cash-schedule muestre los horarios correctos
+PRUEBA 2 - Apertura Automática:
+
+Esperar al minuto configurado
+Verificar que la caja se abra automáticamente
+Confirmar que el estado cambie en la interfaz
+Revisar logs del proceso
+PRUEBA 3 - Cierre Automático y Reporte:
+
+Esperar al minuto de cierre configurado
+Verificar que la caja se cierre automáticamente
+CONFIRMAR que se genere el reporte automático completo
+Verificar que aparezca en "📊 Historial de Cierres Diarios"
+Confirmar que el reporte sea descargable
+Revisar que contenga TODOS los datos del período
+PRUEBA 4 - Múltiples Ciclos:
+
+Repetir el proceso 3 veces consecutivas
+Verificar consistencia en cada ciclo
+Confirmar que no se pierdan datos entre ciclos
+CORRECCIONES ESPECÍFICAS NECESARIAS:
+
+Corregir zona horaria:
+
+Sincronizar sistema con hora local correcta
+Ajustar configuración de JavaScript/Node.js
+Corregir queries de base de datos con timezone
+Corregir /cash-schedule:
+
+Asegurar que lea de base de datos Neon
+Mostrar horarios reales configurados
+Corregir formato de visualización
+Corregir generación de reportes:
+
+Identificar por qué no se ejecuta
+Corregir el trigger de generación
+Asegurar que capture TODOS los datos
+ENTREGABLES:
+
+Código corregido con zona horaria apropiada
+/cash-schedule funcionando correctamente
+Sistema de reportes automáticos operativo
+Log detallado de todas las pruebas realizadas
+Scripts SQL si necesitas corregir configuraciones de DB
+Documentación de cambios realizados
+PROCESO OBLIGATORIO:
+
+Hacer backup de código actual que funciona
+Identificar exactamente qué está fallando
+Corregir solo lo necesario sin tocar funcionalidades que funcionan
+Realizar TODAS las pruebas especificadas
+Documentar cada corrección realizada
+RECORDATORIO CRÍTICO: Realiza las pruebas paso a paso y confirma que cada función opere correctamente antes de continuar.
+
+Procede con este análisis, corrección y pruebas exhaustivas ahora.

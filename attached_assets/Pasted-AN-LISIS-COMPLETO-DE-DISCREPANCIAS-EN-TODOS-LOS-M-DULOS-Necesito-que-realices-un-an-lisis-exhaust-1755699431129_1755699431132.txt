@@ -1,0 +1,78 @@
+ANÁLISIS COMPLETO DE DISCREPANCIAS EN TODOS LOS MÓDULOS
+
+Necesito que realices un análisis exhaustivo para identificar TODAS las discrepancias existentes en el sistema completo, siguiendo estrictamente las reglas configuradas.
+
+ANÁLISIS REQUERIDO:
+
+1. DISCREPANCIAS ENTRE CÓDIGO Y BASE DE DATOS:
+
+Compara el código actual con database_schema.txt
+Identifica tablas que existen en código pero no en esquema documentado
+Identifica campos que no coinciden entre código y esquema
+Detecta relaciones (foreign keys) inconsistentes
+Encuentra índices faltantes o mal definidos
+2. ANÁLISIS POR MÓDULO:
+
+Caja Avanzada: Discrepancias en estructura de datos, campos faltantes, relaciones incorrectas
+Productos: Inconsistencias en catálogo, precios, categorías
+Pagos/Gastos: Diferencias en tipos de pago, categorías, registros
+Pedidos: Estados inconsistentes, relaciones con productos/clientes
+Reportes: Datos que no coinciden con fuentes originales
+Vendedores: Comisiones, asignaciones, permisos inconsistentes
+Clientes: Información duplicada, campos faltantes
+Control de Stock: Cantidades que no cuadran, movimientos sin registrar
+3. DISCREPANCIAS DE INTERCONEXIONES:
+
+Relaciones rotas entre módulos
+Datos que no se sincronizan correctamente
+Triggers o eventos que no funcionan
+Flujos de datos interrumpidos
+4. INCONSISTENCIAS DE CONFIGURACIÓN:
+
+Variables de entorno incorrectas
+Configuraciones que no coinciden entre archivos
+URLs de base de datos incorrectas
+Dependencias desactualizadas
+5. DISCREPANCIAS DE FUNCIONALIDAD:
+
+Funciones que existen en código pero no funcionan
+Botones o enlaces que no responden
+Formularios con validaciones incorrectas
+Reportes que muestran datos erróneos
+ENTREGABLES ESPERADOS:
+
+1. REPORTE DETALLADO DE DISCREPANCIAS:
+
+Lista completa por módulo
+Nivel de criticidad (crítico/medio/bajo)
+Impacto en funcionalidades existentes
+Descripción exacta del problema
+2. SCRIPTS SQL DE CORRECCIÓN:
+
+Scripts para alinear base de datos con código
+Scripts para crear tablas/campos faltantes
+Scripts para corregir relaciones
+Scripts para agregar índices necesarios
+3. PLAN DE CORRECCIÓN:
+
+Orden recomendado para aplicar correcciones
+Qué se puede corregir automáticamente en código
+Qué requiere scripts SQL manuales
+Qué funcionalidades podrían verse afectadas
+4. ACTUALIZACIÓN DE DOCUMENTACIÓN:
+
+Actualizar database_schema.txt con estado real
+Actualizar SYSTEM_DOCUMENTATION.md con discrepancias encontradas
+Crear log de inconsistencias para seguimiento
+PROCESO OBLIGATORIO:
+
+Revisar TODOS los archivos del proyecto
+Comparar con database_schema.txt línea por línea
+Verificar cada módulo individualmente
+Probar interconexiones entre módulos
+IDENTIFICAR QUÉ FUNCIONA CORRECTAMENTE para no tocarlo
+Documentar TODO lo encontrado
+RECORDATORIO CRÍTICO: Este es un análisis de diagnóstico. NO corrijas nada automáticamente. Solo identifica, documenta y proporciona scripts para que yo ejecute manualmente.
+
+Procede con este análisis completo de discrepancias ahora.
+
